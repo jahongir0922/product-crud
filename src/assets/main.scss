@@ -1,0 +1,146 @@
+@import "./base";
+@import "./noscroll";
+@import "./variables";
+@import "./mixins";
+@import "./breakpoints";
+@import "./fonts/font.css";
+* {
+  font-family: "Gilroy", sans-serif;
+}
+.container {
+  width: 1160px;
+  @include media("<=1160px") {
+    padding: 10px;
+    width: 100%;
+  }
+}
+.start_test_btn {
+  padding: 28px 45px;
+  border-radius: 82px;
+  background-color: #f15525;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+  @include media("<=1000px") {
+    font-size: 15px;
+    padding: 20px 40px;
+  }
+}
+.logo {
+  width: 100px;
+  border-radius: 5px;
+}
+.icon_add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: $blue_btn;
+  border-radius: 50%;
+  &:hover {
+    background-color: $blue_btn_hover;
+  }
+  &:active {
+    background-color: $blue_btn;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+.justify_between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fd_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-modal {
+  width: 98%;
+  font-size: 18px;
+  text-align: start;
+}
+.input,
+input {
+  margin: 5px;
+  border: 1px solid $hr;
+  padding: 12px;
+  border-radius: 4px;
+  &:focus {
+    border: 1px solid $kok;
+    outline: none;
+  }
+}
+.delete_icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  user-select: none;
+  &:hover {
+    background-color: $edithover;
+  }
+  &:active {
+    background-color: $edit;
+  }
+}
+
+.edit_icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  user-select: none;
+  &:hover {
+    background-color: $edithover;
+  }
+  &:active {
+    background-color: $edit;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+// pagination>>>>>
+.pagination-container {
+  display: flex;
+  column-gap: 10px;
+}
+.paginate-buttons {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: rgb(242, 242, 242);
+  border: 1px solid rgb(217, 217, 217);
+  color: black;
+}
+.paginate-buttons:hover {
+  background-color: #d8d8d8;
+}
+.active-page {
+  background-color: #3498db;
+  border: 1px solid #3498db;
+  color: white;
+}
+.active-page:hover {
+  background-color: #2988c8;
+}
+// pagination^^^^^^^^^^
+.alert-width {
+  @include media("<=LGdesktop") {
+    width: 50%;
+  }
+  @include media("<=tablet") {
+    width: 100%;
+  }
+}
